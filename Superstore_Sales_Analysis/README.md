@@ -1,4 +1,4 @@
-📊 Superstore Sales Analysis – Power BI Project
+                      📊 Superstore Sales Analysis – Power BI Project
 
 📌 Project Overview
 
@@ -30,6 +30,7 @@ ADDCOLUMNS(
 This allows calculations like Sales PY, Profit PY, and % Returned Orders PY.
 
 3️⃣ Creating Measures
+
 🔹 Core KPIs
 Sales = SUM(Orders[Sales])
 Profit = SUM(Orders[Profit])
