@@ -59,36 +59,46 @@ These help measure growth/decline compared to the previous year.
 
 The dashboard includes:
 
-KPI Cards → Sales, Profit, % Returned Orders with YoY change.
+  KPI Cards → Sales, Profit, % Returned Orders with YoY change.
 
-Line Chart → Sales trend vs previous year.
+  Line Chart → Sales trend vs previous year.
 
-Bar Chart → Profit by Product (showing profitable & loss-making items).
+  Bar Chart → Profit by Product (showing profitable & loss-making items).
 
-Map → Profit by State.
+  Map → Profit by State.
 
-Donut Chart → Sales by Segment.
+  Donut Chart → Sales by Segment.
 
-Slicer Panel → Customer, State, Segment, Date range.
+  Slicer Panel → Customer, State, Segment, Date range.
 
 This makes the dashboard interactive and dynamic.
 
 5️⃣ Key Insights
 
 ✔️ Sales reached $2.3M, a +46.8% growth YoY.
+
 ✔️ Profit grew by +48.4% YoY, showing strong business growth.
+
 ✔️ Consumer Segment contributed ~50% of total sales.
+
 ✔️ Some categories (like Tables) consistently showed losses.
+
 ✔️ Certain states showed high sales but lower profit, needing action.
 
 📂 Repository Structure
+
 Superstore-Sales-Analysis/
 │
 ├── Superstore_Dashboard.pbix               # Power BI dashboard file
+
 ├── Superstore_Dashboard.png                # Dashboard screenshot
+
 ├── Superstore_Dashboard_with_Filters.png   # With filters
+
 ├── README.md                               # Documentation
-└── Superstore.xlsx                         # Dataset      
+
+└── Superstore.xlsx                         # Dataset   
+
 
 🚀 How to Use
 
@@ -100,6 +110,7 @@ Use slicers (Customer, State, Segment, Date) to interact with the data.
 
 Explore sales trends, profitability, and returned orders.
 
+
 📌 Tools Used
 
 Power BI – Dashboard & DAX measures
@@ -107,6 +118,7 @@ Power BI – Dashboard & DAX measures
 DAX – Calculations & KPIs
 
 Superstore Dataset – Public dataset
+
 
 📝 Credits
 
