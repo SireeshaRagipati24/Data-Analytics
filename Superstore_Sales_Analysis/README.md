@@ -1,4 +1,5 @@
 📊 Superstore Sales Analysis – Power BI Project
+
 📌 Project Overview
 
 This project is an end-to-end Sales Analysis Dashboard built using the Superstore dataset.
@@ -6,6 +7,7 @@ The dashboard helps analyze Sales, Profit, and Returned Orders with Year-over-Ye
 It allows business users to identify growth trends, profitable segments, and loss-making categories.
 
 🛠️ Steps Followed
+
 1️⃣ Data Import & Preparation
 
 Imported Orders and Returns tables from the Superstore dataset.
