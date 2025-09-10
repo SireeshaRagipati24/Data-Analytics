@@ -87,8 +87,9 @@ This makes the dashboard interactive and dynamic.
 
 📂 Repository Structure
 
+
 Superstore-Sales-Analysis/
-│
+
 ├── Superstore_Dashboard.pbix               # Power BI dashboard file
 
 ├── Superstore_Dashboard.png                # Dashboard screenshot
