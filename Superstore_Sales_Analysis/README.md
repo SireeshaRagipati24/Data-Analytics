@@ -1,130 +1,81 @@
-                      📊 Superstore Sales Analysis – Power BI Project
+# 📊 Superstore Sales Analysis – Power BI Project
 
-📌 Project Overview
+## Overview
+This project focuses on analyzing sales performance using the Superstore dataset.  
+An interactive Power BI dashboard was built to track **Sales, Profit, and Returned Orders**, along with **Year-over-Year (YoY)** comparisons to support business decision-making.
 
-This project is an end-to-end Sales Analysis Dashboard built using the Superstore dataset.
-The dashboard helps analyze Sales, Profit, and Returned Orders with Year-over-Year (YoY) comparison.
-It allows business users to identify growth trends, profitable segments, and loss-making categories.
+---
 
-🛠️ Steps Followed
+## Dataset
+- Superstore Sample Dataset (Orders & Returns)
+- Contains information on sales, profit, customers, products, regions, and returns
 
-1️⃣ Data Import & Preparation
+---
 
-Imported Orders and Returns tables from the Superstore dataset.
+## Key Features
+- Sales & Profit analysis with YoY comparison
+- Identification of profitable and loss-making products
+- Customer segment-wise sales analysis
+- State-wise profit distribution
+- Returned orders percentage tracking
+- Fully interactive dashboard using slicers
 
-Checked data types for Date, Sales, Profit, Order IDs.
+---
 
-Removed unnecessary columns and ensured clean data for reporting.
+## Data Preparation
+- Imported Orders and Returns tables
+- Cleaned data and corrected data types
+- Removed unnecessary columns
+- Created a Date Table using DAX for time intelligence
+- Built relationships between tables
 
-2️⃣ Creating a Date Table
+---
 
-To perform time-based comparisons, I created a Date Table in DAX:
+## DAX Measures Created
+- Total Sales
+- Total Profit
+- % Returned Orders
+- Sales (Previous Year)
+- Profit (Previous Year)
+- YoY Growth for Sales and Profit
+- YoY change in Returned Orders
 
-Date Table = 
-ADDCOLUMNS(
-    CALENDAR( MIN( Orders[Order Date] ), MAX( Orders[Order Date] ) ),
-    "start of month", EOMONTH( [Date], -1 ) + 1
-)
+---
 
+## Dashboard Visuals
+- KPI Cards: Sales, Profit, % Returned Orders (with YoY)
+- Line Chart: Sales trend vs Previous Year
+- Bar Chart: Profit by Product
+- Donut Chart: Sales by Customer Segment
+- Map: Profit by State
+- Slicers: Customer, State, Segment, Date
 
-This allows calculations like Sales PY, Profit PY, and % Returned Orders PY.
+---
 
-3️⃣ Creating Measures
-
-🔹 Core KPIs
-Sales = SUM(Orders[Sales])
-Profit = SUM(Orders[Profit])
-
-🔹 % Returned Orders
-% Returned Orders =
-VAR _total_orders = DISTINCTCOUNT(Orders[Order ID])
-VAR _returned_orders = DISTINCTCOUNT(Returns[Order ID])
-VAR _perc = DIVIDE(_returned_orders, _total_orders)
-RETURN _perc
-
-🔹 Previous Year (PY) Measures
-Sales PY = CALCULATE([Sales], SAMEPERIODLASTYEAR('Date Table'[Date]))
-Profit PY = CALCULATE([Profit], SAMEPERIODLASTYEAR('Date Table'[Date]))
-% Returned Orders PY = CALCULATE([% Returned Orders], SAMEPERIODLASTYEAR('Date Table'[Date]))
-
-🔹 Variance vs PY
-vs PY - Sales = DIVIDE([Sales] - [Sales PY], [Sales PY])
-vs PY - Profit = DIVIDE([Profit] - [Profit PY], [Profit PY])
-vs PY - % Returned Orders = [% Returned Orders] - [% Returned Orders PY]
-
-
-These help measure growth/decline compared to the previous year.
-
-4️⃣ Dashboard Design
-
-The dashboard includes:
-
-  KPI Cards → Sales, Profit, % Returned Orders with YoY change.
-
-  Line Chart → Sales trend vs previous year.
-
-  Bar Chart → Profit by Product (showing profitable & loss-making items).
-
-  Map → Profit by State.
-
-  Donut Chart → Sales by Segment.
-
-  Slicer Panel → Customer, State, Segment, Date range.
-
-This makes the dashboard interactive and dynamic.
-
-5️⃣ Key Insights
-
-✔️ Sales reached $2.3M, a +46.8% growth YoY.
-
-✔️ Profit grew by +48.4% YoY, showing strong business growth.
-
-✔️ Consumer Segment contributed ~50% of total sales.
-
-✔️ Some categories (like Tables) consistently showed losses.
-
-✔️ Certain states showed high sales but lower profit, needing action.
-
-📂 Repository Structure
+## Key Insights
+- Total sales showed strong YoY growth
+- Profit increased consistently year over year
+- Consumer segment contributed the highest sales
+- Some product categories generated continuous losses
+- Certain states showed high sales but low profitability
 
 
-Superstore-Sales-Analysis/
+---
 
-├── Superstore_Dashboard.pbix               # Power BI dashboard file
+## How to Use
+1. Download or clone the repository
+2. Open the `.pbix` file in Power BI Desktop
+3. Use slicers to interact with the dashboard
+4. Analyze sales, profit, and return trends
 
-├── Superstore_Dashboard.png                # Dashboard screenshot
+---
 
-├── Superstore_Dashboard_with_Filters.png   # With filters
+## Tools Used
+- Power BI
+- DAX
+- Excel (Dataset)
 
-├── README.md                               # Documentation
+---
 
-└── Superstore.xlsx                         # Dataset   
-
-
-🚀 How to Use
-
-Download or clone this repository.
-
-Open the .pbix file in Power BI Desktop.
-
-Use slicers (Customer, State, Segment, Date) to interact with the data.
-
-Explore sales trends, profitability, and returned orders.
-
-
-📌 Tools Used
-
-Power BI – Dashboard & DAX measures
-
-DAX – Calculations & KPIs
-
-Superstore Dataset – Public dataset
-
-
-📝 Credits
-
-Dataset: Superstore Sample Dataset (public)
-
-Visualization Tool: Power BI
-
-Author: Ragipati Sireesha
+## Author
+**Sireesha Ragipati**
