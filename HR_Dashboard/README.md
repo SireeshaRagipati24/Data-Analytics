@@ -1,103 +1,133 @@
-# 📊 HR Analytics Dashboard | People Analytics – Power BI
+# 👥 HR Analytics Dashboard
 
-## 📌 Overview
-The **HR Analytics Dashboard** project focuses on analyzing workforce data to provide actionable **People Analytics insights** for HR and business stakeholders.  
-The dashboard enables effective monitoring of employee headcount, attrition, performance, recruitment sources, and satisfaction to support **data-driven workforce decisions**.
+> **Transforming raw HR data into workforce intelligence** — an interactive Power BI dashboard analyzing headcount, attrition, performance, recruitment, and employee satisfaction across departments and years.
 
 ---
 
-## 🎯 Objectives
-- Track overall **employee headcount and attrition**
-- Analyze **employee performance and satisfaction**
-- Identify **department-wise workforce distribution**
-- Evaluate **recruitment source effectiveness**
-- Support HR teams with **accurate, quality-assured reporting**
+## 🖥️ Dashboard Preview
+
+![HR Dashboard](https://github.com/SireeshaRagipati24/Data-Analytics/blob/main/HR_Dashboard/HR_Dashboard.png)
+
+> Built in **Power BI** | Interactive filters: Department · Year (2006–2018)
 
 ---
 
-## 📂 Dataset
-- HR employee dataset containing:
-  - Employee demographics
-  - Department and job roles
-  - Performance ratings
-  - Recruitment sources
-  - Employment status (Active / Terminated)
-  - Satisfaction levels
+## 📌 Project Overview
+
+This HR Analytics project delivers a comprehensive view of an organization's workforce health. By analyzing employee data across multiple dimensions — demographics, departments, performance ratings, and recruitment sources — this dashboard helps HR teams and business leaders make data-backed people decisions.
 
 ---
 
-## 🧹 Data Preparation & Quality Checks
-- Cleaned and validated HR data to ensure **accuracy and consistency**
-- Removed duplicate and invalid records
-- Corrected data types for reporting readiness
-- Verified employee counts against business rules
-- Ensured KPI consistency across visuals
+## 📊 Key Metrics at a Glance
+
+| Metric | Value |
+|---|---|
+| 👥 Total Headcount | 243 |
+| ❌ Terminated Employees | 162 (67%) |
+| ✅ Active Employees | 81 (33%) |
+| 👨 Male Employees | 101 (42%) |
+| 👩 Female Employees | 142 (58%) |
+| 💰 Total Payroll | 17M |
 
 ---
 
-## 📐 Key KPIs & Metrics
-- Total Headcount  
-- Active vs Terminated Employees  
-- Male vs Female Ratio  
-- Department-wise Employee Distribution  
-- Employee Performance Ratings  
-- Employee Satisfaction Levels  
-- Recruitment Source Analysis  
+## 🔍 Business Questions Answered
+
+| # | Question | Visual Used |
+|---|---|---|
+| 1 | What is the total headcount and active vs terminated split? | KPI Cards |
+| 2 | How is headcount distributed across departments? | Bar Chart |
+| 3 | What is the gender breakdown of the workforce? | KPI Cards |
+| 4 | What are the performance ratings across employees? | Donut Chart |
+| 5 | Which recruitment sources bring in the most hires? | Horizontal Bar Chart |
+| 6 | What is the employee satisfaction distribution? | Donut Chart |
+| 7 | How is headcount distributed geographically? | Map Visual |
+| 8 | What is the marital status breakdown of employees? | Donut Chart |
+| 9 | How has hiring trended year over year (2006–2018)? | Year Slicer Filter |
+| 10 | What is the total payroll by department? | KPI + Department Breakdown |
 
 ---
 
-## 📊 Dashboard Features
-- **KPI Cards** for quick workforce overview  
-- **Bar Charts** for department and recruitment analysis  
-- **Donut Charts** for performance, satisfaction, and demographics  
-- **Map Visualization** for location-based headcount insights  
-- **Interactive Slicers** for Year and Department filtering  
+## 🧠 Key Insights
+
+- 🔴 **67% termination rate** — a critical attrition signal requiring immediate HR intervention
+- 🏭 **Production department** has the highest headcount (159) — also likely highest attrition risk
+- 👩 **Female employees (58%)** outnumber male employees — positive diversity indicator
+- 🌐 **Indeed & LinkedIn** are the top recruitment sources — digital hiring channels dominate
+- 😊 **Employee satisfaction** shows majority in "Acceptable" to "Very High" range — moderate engagement
+- 📉 **78.14% of employees "Fully Meet"** performance expectations — a healthy performance curve
+- 💼 **Executive Office** has the smallest headcount (250K payroll) vs Production (9.4M) — clear cost concentration
 
 ---
 
-## 🔍 Key Insights
-- Certain departments have significantly higher workforce concentration
-- Recruitment platforms like **LinkedIn and Indeed** contribute the majority of hires
-- Most employees fall under **“Fully Meets” performance category**
-- Employee satisfaction levels are largely **Acceptable to Very High**
-- Gender distribution shows balanced workforce participation
+## 🛠️ Tech Stack
+
+| Tool | Purpose |
+|---|---|
+| **Power BI** | Interactive dashboard & all visualizations |
+| **Excel (HRData.xlsx)** | Raw data source & initial cleaning |
+| **DAX** | Calculated measures (%, KPIs, headcount logic) |
+| **Power Query** | Data transformation & shaping |
 
 ---
 
-## 🧠 Business Impact
-- Enables HR teams to **identify attrition risks early**
-- Improves workforce planning using **People Analytics**
-- Supports leadership with **accurate, quality-validated insights**
-- Reduces manual HR reporting effort through automation
+## 📂 Project Structure
+
+```
+HR_Dashboard/
+│
+├── 📊 HR_Dashboard.png        # Dashboard screenshot
+├── 📋 HRData.csv.xlsx         # Raw HR dataset
+├── 📁 HR_Dashboard.pbix       # Power BI source file
+└── 📝 README.md
+```
 
 ---
 
-## 🛠 Tools & Technologies
-- **Power BI**
-- **DAX**
-- **Microsoft Excel**
-- **People Analytics Concepts**
-- **Data Quality & Validation Techniques**
+## 💡 DAX Measures Used
+
+**Active Employee %:**
+```dax
+Active % = 
+DIVIDE(
+    CALCULATE(COUNT(HRData[EmpID]), HRData[EmploymentStatus] = "Active"),
+    COUNT(HRData[EmpID])
+) * 100
+```
+
+**Termination Rate:**
+```dax
+Termination Rate = 
+DIVIDE(
+    CALCULATE(COUNT(HRData[EmpID]), HRData[EmploymentStatus] = "Terminated"),
+    COUNT(HRData[EmpID])
+) * 100
+```
+
+**Total Payroll:**
+```dax
+Total Payroll = SUM(HRData[Salary])
+```
 
 ---
 
-## ▶ How to Use
-1. Download or clone the repository  
-2. Open the `.pbix` file in **Power BI Desktop**  
-3. Use slicers to filter data by department or year  
-4. Explore KPIs and visuals to gain HR insights  
+## 📈 What I Learned
+
+- Designing **executive-level HR dashboards** that tell a clear workforce story
+- Using **DAX** to create dynamic KPIs and percentage calculations
+- Building **multi-filter interactive reports** with department and year slicers
+- Translating **HR metrics into business insights** around attrition, performance, and hiring
+- Working with **map visuals** for geographic headcount distribution
 
 ---
 
-## 👩‍💻 Author
-**Sireesha Ragipati**  
-Data Analytics | People Analytics Enthusiast  
-🔗 GitHub: https://github.com/SireeshaRagipati24
+## 🙋‍♀️ About Me
+
+**Sireesha Ragipati** — Aspiring Data Analyst passionate about turning raw data into meaningful stories.
+
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://linkedin.com/in/your-linkedin-here)
 
 ---
 
-## ⭐ Project Highlights
-- End-to-end **HR Analytics & Data Quality project**
-- Strong focus on **People Analytics**
-- Business-oriented dashboard design
-- Recruiter and enterprise-ready reporting
+*⭐ If you found this project helpful, consider giving it a star!*
