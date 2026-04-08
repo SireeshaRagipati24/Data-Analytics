@@ -12,7 +12,7 @@ This end-to-end data analytics project explores customer shopping behaviour acro
 
 ## 🖥️ Dashboard Preview
 
-![Customer Behaviour Dashboard]([Customer_Behaviour_Analysis/Dashboard_Image.png](https://github.com/SireeshaRagipati24/Data-Analytics/blob/main/Customer_Behaviour_Analysis/Dashboard_Image.png))
+![Customer Behaviour Dashboard](https://github.com/SireeshaRagipati24/Data-Analytics/blob/main/Customer_Behaviour_Analysis/Dashboard_Image.png)
 
 > Built in **Power BI** | Interactive slicers: Gender · Category · Subscription Status · Shipping Type
 
