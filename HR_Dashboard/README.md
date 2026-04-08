@@ -126,7 +126,8 @@ Total Payroll = SUM(HRData[Salary])
 **Sireesha Ragipati** — Aspiring Data Analyst passionate about turning raw data into meaningful stories.
 
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://linkedin.com/in/your-linkedin-here)
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sireesha-ragipati-269a10244/)
 
 ---
 
